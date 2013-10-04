@@ -1,0 +1,27 @@
+{
+  "name": "hubot-nomlish",
+  "version": "0.0.0",
+  "author": {
+    "name": "shinya.saiho",
+    "email": "saihoooooooo@gmail.com"
+  },
+  "keywords": [
+    "hubot",
+    "nomlish"
+  ],
+  "description": "Nomlish translation in hubot.",
+  "licenses": [{
+    "type": "MIT/X",
+    "url": "https://github.com/saihoooooooo/hubot-nomlish/LICENSE.md"
+  }],
+  "repository" : {
+    "type": "git",
+    "url": "https://github.com/saihoooooooo/hubot-nomlish.git"
+  },
+  "readmeFilename": "README.md",
+  "main": "index.coffee",
+  "dependencies": {
+    "request": "~2.27.0",
+    "cheerio": "~0.12.1"
+  }
+}
