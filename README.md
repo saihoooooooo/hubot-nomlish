@@ -17,7 +17,7 @@ Usage
 -----
 
 ```
-hubot nomlish $B$3$l$O%F%9%H$G$9(B 4 // $B$+$NB8:_$O?@!9$,:n$j=P$7$??M$X$N2]Bj$@$H$$$&$N$+!D(B
+hubot nomlish これはテストです 4 // かの存在は神々が作り出した人への課題だというのか…
 ```
 
 [1]: http://racing-lagoon.info/nomu/translate.php
