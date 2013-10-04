@@ -6,10 +6,15 @@ hubot-nomlish
 Installation
 ------------
 
-1. Download this repository (It is non-registration in npm).
-2. Add the following code in your `external-scripts.json`.
+* Run the `npm install` command.
 
-```json
+```
+$ npm install hubot-nomlish
+```
+
+* Add the following code in your `external-scripts.json` file.
+
+```
 ["hubot-nomlish"]
 ```
 
