@@ -38,7 +38,7 @@ module.exports = (robot) ->
       params,
       (error, response, body) ->
         if error or response.statusCode != 200
-          msg.send '通信が断罪＜クライム＞されました'
+          msg.send 'ERROR: 通信が断罪＜クライム＞しました'
         else
           $ = cheerio.load body
           msg.send $('textarea[name="after"]').text()
