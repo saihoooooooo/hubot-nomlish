@@ -22,6 +22,7 @@ Usage
 -----
 
 ```
+# hubot nomlish <Japanese> [<level(1-5)>]
 hubot nomlish これはテストです 4 // かの存在は神々が作り出した人への課題だというのか…
 ```
 
