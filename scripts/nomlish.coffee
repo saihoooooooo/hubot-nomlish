@@ -24,7 +24,7 @@ cheerio = require 'cheerio'
 module.exports = (robot) ->
   robot.respond /NOMLISH (.+)/i, (msg) ->
     params = form:
-      transbtn: 1
+      trans_btn: 1
 
     levelMatch = msg.match[1].match /\s([1-5])$/
     if levelMatch?
