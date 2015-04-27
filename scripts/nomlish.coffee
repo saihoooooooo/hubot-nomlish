@@ -26,7 +26,7 @@ module.exports = (robot) ->
     params = form:
       transbtn: 1
 
-    levelMatch = msg.match[1].match /\s([1-5])$/
+    levelMatch = msg.match[1].match /\s([1-6])$/
     if levelMatch?
       params.form.before = msg.match[1].slice(0, -2)
       params.form.level = levelMatch[1]
