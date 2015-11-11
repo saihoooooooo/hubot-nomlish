@@ -10,7 +10,7 @@
 #   None
 #
 # Commands:
-#   hubot nomlish <Japanese> [<level(1-5)>] - Translating from Japanese into Nomlish. Default level is 2.
+#   hubot nomlish <Japanese> [<level(1-6)>] - Translating from Japanese into Nomlish. Default level is 2.
 #
 # Notes:
 #   "anchk" option is not appointed.
@@ -41,4 +41,4 @@ module.exports = (robot) ->
           msg.send 'ERROR: 通信が断罪＜クライム＞しました'
         else
           $ = cheerio.load body
-          msg.send $('textarea[name="after"]').text()
+          msg.send $('textarea[name="after1"]').text()
