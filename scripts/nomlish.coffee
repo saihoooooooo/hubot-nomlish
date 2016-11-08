@@ -21,10 +21,14 @@
 request = require 'request'
 cheerio = require 'cheerio'
 
+request = request.defaults
+  jar: true
+
 module.exports = (robot) ->
   robot.respond /NOMLISH (.+)/i, (msg) ->
     params = form:
       transbtn: 1
+      options: 'nochk'
 
     levelMatch = msg.match[1].match /\s([1-6])$/
     if levelMatch?
@@ -34,11 +38,18 @@ module.exports = (robot) ->
       params.form.before = msg.match[1]
       params.form.level = 2
 
-    request.post 'http://racing-lagoon.info/nomu/translate.php',
-      params,
-      (error, response, body) ->
-        if error or response.statusCode != 200
-          msg.send 'ERROR: 通信が断罪＜クライム＞しました'
-        else
-          $ = cheerio.load body
-          msg.send $('textarea[name="after1"]').text()
+    url = 'http://racing-lagoon.info/nomu/translate.php'
+    errormsg = 'ERROR: 通信が断罪＜クライム＞しました'
+
+    request url, (error, response, body) ->
+      if error or response.statusCode != 200
+        msg.send errormsg
+      else
+        $ = cheerio.load body
+        params.form.token = $('input[name="token"]').val()
+        request.post url, params, (error, response, body) ->
+          if error or response.statusCode != 200
+            msg.send errormsg
+          else
+            $ = cheerio.load body
+            msg.send $('textarea[name="after1"]').text()
