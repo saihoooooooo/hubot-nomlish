@@ -38,7 +38,7 @@ module.exports = (robot) ->
       params.form.before = msg.match[1]
       params.form.level = 2
 
-    url = 'http://racing-lagoon.info/nomu/translate.php'
+    url = 'https://racing-lagoon.info/nomu/translate.php'
     errormsg = 'ERROR: 通信が断罪＜クライム＞しました'
 
     request url, (error, response, body) ->
